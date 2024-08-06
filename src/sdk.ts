@@ -41,7 +41,7 @@ export class QuarrySDK {
   withSigner(signer: Signer): QuarrySDK {
     return QuarrySDK.load({
       provider: this.provider.withSigner(signer),
-      addresses: mapValues(this.programs, (v) => v.programId),
+      addresses: mapValues(this.programs, (v: any) => v.programId),
     });
   }
 
